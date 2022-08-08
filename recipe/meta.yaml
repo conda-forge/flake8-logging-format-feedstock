@@ -1,5 +1,5 @@
 {% set name = "flake8-logging-format" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flake8-logging-format-{{ version }}.tar.gz
-  sha256: ca5f2b7fc31c3474a0aa77d227e022890f641a025f0ba664418797d979a779f8
+  sha256: d867b46a8a2da5d6b70aa115022a104cf6dae6a671637aae2ef3eb6eac4235dd
 
 build:
   number: 0
@@ -28,7 +28,7 @@ test:
     - logging_format
   commands:
     - pip check
-    - 'flake8 --version | grep logging-format'
+    - flake8 --version | grep logging-format
   requires:
     - flake8
     - m2-grep  # [win]
